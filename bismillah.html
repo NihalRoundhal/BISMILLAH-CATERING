@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bismillah Catering, Airoli – Menu & Rates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6ec;--card:#fff;--ink:#2a1a1a;--mut:#7a6a62;--red:#7a1020;--gold:#b08a3c;--line:#eadfc9;--tint:#f4ead6;--veg:#1f8a3b;--non:#c4161c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1112;--card:#251819;--ink:#f6ece0;--mut:#b9a69a;--red:#e0566a;--gold:#d8b25c;--line:#3a2729;--tint:#2f1f21}}
+*{box-sizing:border-box}
+html{scroll-padding-top:120px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;line-height:1.4}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0}
+.hero{background:#7a1020;color:#fbf6ec;text-align:center;padding:30px 18px 26px;border-bottom:4px solid var(--gold)}
+.hero h1{font-size:clamp(34px,8vw,56px);font-weight:800;letter-spacing:.5px}
+.hero p{margin:6px 0 0;color:#e8cf8f}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.chips span{background:rgba(255,255,255,.12);border:1px solid rgba(232,207,143,.5);border-radius:99px;padding:6px 12px;font-size:14px}
+.cta{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:99px;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer}
+.b1{background:#e8cf8f;color:#4a0a14}.b2{background:#25a244;color:#fff}.b3{background:transparent;color:#fbf6ec;border:1px solid #e8cf8f}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 12px 8px}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:99px;font:inherit;font-weight:600;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--red);color:#fff;border-color:var(--red)}
+.tabs button:focus-visible,.btn:focus-visible,input:focus-visible,.seg button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.search{margin-top:8px}
+.search input{width:100%;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+main{max-width:1100px;margin:0 auto;padding:18px 14px 110px}
+.note{background:var(--tint);border-left:5px solid var(--gold);padding:12px 14px;border-radius:10px;margin-bottom:16px;font-size:15px}
+.note b{color:var(--red)}
+.seg{display:inline-flex;background:var(--tint);border-radius:99px;padding:4px;margin:4px 0 14px}
+.seg button{border:0;background:transparent;color:var(--ink);padding:8px 16px;border-radius:99px;font:inherit;font-weight:600;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--red);color:#fff}
+section{margin-bottom:26px}
+section h2{font-size:24px;color:var(--red);display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.dot{width:16px;height:16px;border:2px solid;border-radius:3px;display:inline-grid;place-items:center;flex:none}
+.dot:after{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.v{color:var(--veg)}.n{color:var(--non)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:8px}
+.row{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.p{font-weight:700;color:var(--red);white-space:nowrap}
+.p small{color:var(--mut);font-weight:400}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.dish h3{font-size:18px}
+.tag{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;margin-left:6px;vertical-align:middle}
+.sizes{display:flex;gap:8px}
+.sizes div{flex:1;background:var(--tint);border-radius:10px;padding:8px 10px;text-align:center}
+.sizes small{display:block;color:var(--mut);font-size:12px}
+.sizes b{font-size:20px;color:var(--red)}
+.empty{text-align:center;color:var(--mut);padding:30px}
+.float{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);z-index:6}
+.float .btn{flex:1;justify-content:center}
+footer{text-align:center;color:var(--mut);font-size:14px;padding:0 14px 20px}
+:root,:root:not([data-theme="light"]){--bg:#150a0c;--card:#241217;--ink:#f8ecd8;--mut:#c9ae92;--red:#f0c96a;--gold:#e0b552;--line:#4a2a2a;--tint:#321a20;color-scheme:dark}
+body{background:radial-gradient(circle at 15% 0,rgba(168,32,58,.25),transparent 40%),radial-gradient(circle at 90% 30%,rgba(224,181,82,.08),transparent 40%),var(--bg);background-attachment:fixed}
+.hero{position:relative;overflow:hidden;padding:36px 18px 44px;border:0;border-radius:0 0 50% 50%/0 0 34px 34px;background:radial-gradient(ellipse at 50% -10%,#b4243f 0,#6a0f20 45%,#2a0710 100%)}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 120%,rgba(240,201,106,.10) 0 6deg,transparent 6deg 12deg);pointer-events:none}
+.hero>*{position:relative}
+.badge{width:92px;height:92px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;font:800 34px Fraunces,Georgia,serif;color:#f0c96a;background:radial-gradient(#4a0a16,#210510);border:3px solid #e0b552;box-shadow:0 0 0 6px rgba(224,181,82,.18),0 0 40px rgba(240,201,106,.45);animation:fl 4s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-6px)}}
+.hero h1{font-size:clamp(40px,11vw,76px);line-height:1.05;background:linear-gradient(100deg,#f7e2a0 20%,#fff6d6 40%,#e0b552 60%,#f7e2a0 80%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 2.8s ease-out 1;text-shadow:none;filter:drop-shadow(0 3px 10px rgba(0,0,0,.4))}
+@keyframes sh{from{background-position:120% 0}to{background-position:0 0}}
+.hero p{font-size:17px;color:#f6dfa6;letter-spacing:.5px}
+.chips span{background:rgba(0,0,0,.28);backdrop-filter:blur(4px)}
+.btn{box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .15s}.btn:active{transform:scale(.96)}
+.b1{background:linear-gradient(#f7e2a0,#d9a93e);color:#3a0711}
+.b2{background:linear-gradient(#34c759,#1b8f3a)}
+.tick{background:linear-gradient(90deg,#d9a93e,#f7e2a0,#d9a93e);color:#3a0711;font-weight:700;overflow:hidden;white-space:nowrap;padding:8px 0;margin-top:-1px}
+.tick div{display:inline-block;padding-left:100%;animation:mq 28s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.tick div,.badge,.hero h1{animation:none}.tick div{padding-left:14px}}
+nav{background:rgba(21,10,12,.88);backdrop-filter:blur(10px)}
+.tabs button{background:var(--card);border-color:#5a3326;color:var(--ink)}
+.tabs button[aria-selected=true],.seg button[aria-pressed=true]{background:linear-gradient(#f7e2a0,#d9a93e);color:#3a0711;border-color:#f7e2a0}
+.seg button{color:var(--ink)}
+.note{background:linear-gradient(90deg,rgba(224,181,82,.18),rgba(224,181,82,.04));border:1px solid rgba(224,181,82,.4);border-left:5px solid var(--gold);color:var(--ink)}
+section h2{font-size:clamp(24px,6vw,32px);color:#f0c96a}
+section h2:after{content:"";flex:1;height:2px;background:linear-gradient(90deg,#e0b552,transparent)}
+.dish{position:relative;overflow:hidden;background:linear-gradient(160deg,#341820,#1d0e12);border:1px solid #5a3326;transition:transform .2s,box-shadow .2s}
+.dish:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#d9a93e,#f7e2a0,#d9a93e)}
+.dish:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.45),0 0 0 1px #e0b552}
+.dish h3{padding-right:50px;font-size:19px;color:#fff3d8}
+.ic{position:absolute;right:12px;top:14px;font-size:30px;width:46px;height:46px;display:grid;place-items:center;border-radius:50%;background:rgba(224,181,82,.15)}
+.sizes div{background:rgba(0,0,0,.3);border:1px solid rgba(224,181,82,.45)}
+.sizes b{font-size:24px;color:#f0c96a}
+.row{background:linear-gradient(90deg,#2a1418,#221116);border-color:#43261f;transition:border-color .15s,transform .15s}
+.row:hover{border-color:#e0b552;transform:translateX(3px)}
+.p{color:#f0c96a;font-size:17px}
+.tag{background:#c4161c}
+.float{background:rgba(21,10,12,.92);backdrop-filter:blur(10px);border-top:1px solid rgba(224,181,82,.4)}
+:root,:root:not([data-theme="light"]){--bg:#fbf6ec;--card:#fff;--ink:#2a1a1a;--mut:#7a6a62;--red:#7a1020;--gold:#b08a3c;--line:#eadfc9;--tint:#f4ead6;color-scheme:light}
+body{background:#fbf6ec}
+nav{background:rgba(251,246,236,.94);border-bottom:2px solid #b08a3c}
+.tabs button{background:#fff;border:1px solid #b08a3c;color:#7a1020}
+.tabs button[aria-selected=true],.seg button[aria-pressed=true]{background:#7a1020;color:#fff;border-color:#7a1020}
+.seg{background:#f0e4cc;border:1px solid #b08a3c}.seg button{color:#7a1020}
+.note{background:#f4ead6;border:1px solid #b08a3c;border-left:6px solid #7a1020;color:#2a1a1a}
+.note b{color:#7a1020}
+section h2{background:#7a1020;color:#f2d98d;padding:10px 16px;border-radius:12px;font-size:clamp(20px,5.5vw,28px);letter-spacing:.5px;box-shadow:0 3px 0 #b08a3c}
+section h2:after{display:none}
+.dot{background:#fbf6ec;padding:0;border-radius:4px}
+.row{background:#fff;border:1px solid #eadfc9;color:#2a1a1a}
+.row:nth-child(even){background:#f3eadb}
+.row:hover{border-color:#7a1020}
+.p,.sizes b{color:#7a1020}
+.p small{color:#9a7b3a}
+.dish{background:#fff;border:1px solid #d9c391}
+.dish:hover{box-shadow:0 8px 20px rgba(122,16,32,.18),0 0 0 1px #7a1020}
+.dish h3{color:#2a1a1a}
+.ic{background:#f4ead6}
+.sizes div{background:#f4ead6;border:1px solid #b08a3c}
+.sizes small{color:#8a6a2a}
+.tag{background:#7a1020;color:#f2d98d}
+.empty,footer{color:#7a6a62}
+.float{background:#7a1020;border-top:3px solid #b08a3c}
+.float .b1{background:linear-gradient(#f7e2a0,#d9a93e);color:#3a0711}
+footer{padding-bottom:90px}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="badge" aria-hidden="true">BC</div>
+<h1>Bismillah Catering</h1>
+<p>Indian · Chinese · Mughlai &nbsp;|&nbsp; Airoli, Navi Mumbai</p>
+<div class="chips"><span>🚚 Free home delivery</span><span>🎂 Birthday, party &amp; wedding orders</span><span>⏰ Order 4 hours prior</span></div>
+<div class="cta">
+<a class="btn b1" href="tel:+919930122235">📞 Call 99301 22235</a>
+<a class="btn b2" href="https://wa.me/919930122235?text=Hi%20Bismillah%20Catering%2C%20I%20want%20to%20order">💬 WhatsApp</a>
+<button class="btn b3" id="share">🔗 Share this menu</button>
+</div>
+</header>
+<div class="tick" aria-hidden="true"><div>🍛 Dum Biryani &nbsp;✦&nbsp; 🍗 Tandoori &amp; Kebabs &nbsp;✦&nbsp; 🍖 Mutton Specials &nbsp;✦&nbsp; 🧀 Paneer &amp; Veg &nbsp;✦&nbsp; 🍮 Halwa &amp; Sweets &nbsp;✦&nbsp; 🚚 Free Home Delivery in Airoli &nbsp;✦&nbsp; 🎉 Weddings, Parties &amp; Birthdays &nbsp;✦&nbsp;</div></div>
+<nav>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="search"><input id="q" type="search" placeholder="Search any dish, e.g. biryani, paneer, halwa…" aria-label="Search menu"></div>
+</nav>
+<main id="main"></main>
+<div class="float">
+<a class="btn b1" href="tel:+919930122235">📞 Call</a>
+<a class="btn b2" href="https://wa.me/919930122235?text=Hi%20Bismillah%20Catering%2C%20I%20want%20to%20order">💬 WhatsApp order</a>
+</div>
+<footer>Rates in Rupees (Rs.). Kg rates unless marked /pc. Also call 99301 25246.</footer>
+<script>
+// price code: 650 = per kg, 35p = per piece, 3500e = each, Ask
+var D=[
+["Chicken Dum Biryani",160,180,130,150],["Chicken Tikka Biryani",200,220,160,180],["Chicken Tandoori Biryani",190,210,150,170],["Chicken Malai Biryani",220,240,170,190],["Chicken Malai Seekh Biryani",220,240,170,190,"Friday only"],["Mutton Dum Biryani",280,300,230,250],["Veg Dum Biryani",150,170,110,130],["Paneer Tikka Biryani",190,210,140,160],["Dal Gosht",280,300,230,250,"Sunday only"]];
+var S=[["Alfam Chicken Tandoori",480,500,250,270],["Chicken Broasted",450,470,250,270],["Chicken Lollipop",160,180,100,120],["Chicken Shawarama",100,120],["Chicken Shawarama Without Cabbage",110,130],["Chicken Cheese Shawarama",130,150],["Chicken 65 (Leg Piece)",70,90],["Chicken Cutlet",30,40],["Chicken Russian Kebab",30,40]];
+var M=[
+["veg","Veg Starters",1,"Paneer Tikka|650;Paneer Chilly|650;Paneer Kofta|650;Veg Hara Bhara Kabab|35p;Veg Cutlet|30p;Veg Russian Kabab|30p;Veg Reshami Kabab|30p;Veg Samosa|20p;Veg Hungama Kabab|40p;Veg Spring Roll|40p;Cheese Roll Veg|45p"],
+["veg","Veg Biryani & Pulao",1,"Veg Dum Biryani|900;Veg Paneer Mix Biryani|1000;Veg Paneer Dum Biryani|1000;Paneer Tikka Biryani|1100;Paneer White Biryani|1100;Paneer Malai Biryani|1300;Paneer Tandoori Biryani|1300;Veg Pulao|750;Veg White Pulao Paneer|950;Veg Masur Pulao|850"],
+["veg","Veg Gravy",1,"Veg Mix Bhaji|600;Chana Chhole|650;Paneer Korma|800;Paneer Tikka Gravy|850;Palak Paneer|750;Paneer Chilly Gravy|650;Paneer Kofta Gravy|800;Palak Bhaji Sukha|500;Butter Paneer|800;Bhendi Fry Masala|550;Veg Kolhapuri Bhaji|650;Veg Navratna Korma|650;Veg Tawa Bhaji|550;Mix Veg Sukha|500;Dal Fry|450;Dal Tadka|500;Dal Makhani|700"],
+["veg","Rice & Breads",1,"Jeera Rice Basmati|400;Pea Pulao|450;Green Rice|400;Malai Rice|450;Chapati|15p;Butter Chapati|20p;Naan Roti|20p;Butter Naan|25p;Paratha|20p;Rumali Roti|30p;Tandoori Roti|20p;Bakery Naan|40p;Puri|550"],
+["veg","Desserts",1,"Dudhi Halwa|800;Gajar Halwa|800;Pineapple Halwa|900;Suji / Rawa Halwa|800;Sahi Tukda|700;Kaju Pak|1500;Rice Zarda|700;Pav Halwa|800;Double Ka Meetha|750;Gulab Jamun|25p;Malpua|200p;Phirni|80p"],
+["chicken","Chicken Starters",0,"Chicken 65 (Boti)|650;Chicken Tandoori Dry|600;Golden Chicken|700;Chicken Tikka|750;Chicken Lollypop|550;Chicken Russian Kabab|40p;Chicken Reshmi Tikka|40p;Chicken Nargis Kabab|50p;Chicken Hara Bhara Kabab|40p;Chicken Kandi|45p;Chicken Seekh Kabab|60p;Chicken Cutlet|35p;Chicken Akha Tandoori|550;Chicken Leg Fry|70p;Chicken Samosa|25p;Chicken Roll|40p;Chicken Sathe|40p;Lucknowi Seekh Kabab|60p;Schezwan Chicken Starter|50p;Chicken Cheese Roll|50p;Chicken Aflatoon|40p;Chicken Malai Kofta|45p;Chicken Italian|70p;Chicken Kashmiri|50p;Chicken Shawarma|100p;Chicken Alfaam|500;Chicken Pahadi Tikka|700;Chicken Broasted|550;Fish Albaik|Ask;Prawns Fry|Ask"],
+["chicken","Chicken Gravy",0,"Chicken Korma|800;Chicken Masala|750;Chicken Angara|900;Butter Chicken|950;Chicken Chilly|800;Chicken White Korma|800;Chicken Green Korma|800;Chicken Kofta Gravy|900;Chicken Kadai|950;Chicken Sauce|800;Chicken Rashida|1000;Chicken Bhuna|750;Chicken Achari Gosht|950;Chicken Keema|1000;Chicken Dibba Gosht|900;Chicken Do Pyaza|800;Chicken Tikka Gravy Boneless|950"],
+["chicken","Chicken Biryani & Pulao",0,"Chicken Dum Biryani|1000;Chicken Tikka Biryani|1300;Chicken Malai Seekh Biryani|1400;Chicken Tandoori Biryani (Bone)|1300;Chicken Kolhapuri Biryani|1150;Chicken Zam Zam Biryani|1500;Chicken White Biryani|1100;Chicken Akhni Pulao|900;Chicken Masur Pulao|950;Chicken Zam Zam Pulao|1600;Chicken Lucknowi Pulao|1000;Chicken Hyderabadi Biryani|1100;Chicken Kabsa Biryani|1600;Chicken Italian Biryani|1600;Chicken Shahi Biryani|1600;Chicken Chilly Biryani|1200;House Special Biryani|1600;Chicken Kashmiri Biryani|1500"],
+["chicken","Egg & Seafood Biryani",0,"Egg Biryani|800;Fish Biryani|1800;Prawns Biryani|2100"],
+["mutton","Mutton Biryani",0,"Mutton Dum Biryani|1700;Mutton White Biryani|1750;Mutton Tandoori Biryani|2000;Mutton Seekh Biryani|2200;Mutton White Malai Biryani|2300;Mutton Zam Zam Biryani|2400;Mutton Boneless Biryani|2000;Mutton Kofta Biryani|2000;Mutton Kolhapuri Biryani|1800;Mutton Raan Tandoori + Rice|3500;Mutton Zam Zam Pulao|2000;Mutton Hyderabadi Biryani|1800;Mutton Kabsa Biryani|2400;Mutton Italian Biryani|2000;Mutton Shahi Biryani|2500"],
+["mutton","Mutton Starters",0,"Mutton Malai Kofta|80p;Mutton Samosa|40p;Mutton Roll|80p;Mutton Cutlet|50p;Mutton Kandi|80p;Mutton Aflatoon Seekh|100p;Mutton Seekh Kabab|80p;Mutton Shami Kabab|70p;Mutton Nargis Kabab|80p;Mutton Pahadi Kabab|70p;Mutton Hungama Kabab|60p;Mutton Malai Seekh|100p;Mutton Chatni Kabab|50p;Mutton Roasted Leg (2.5 kg)|3500e;Lucknowi Kabab|80p"],
+["mutton","Mutton Gravy",0,"Mutton Korma|1300;Mutton Dal Gosht|1400;Mutton Kolhapuri Korma|1300;Mutton White Korma|1300;Mutton Green Korma|1200;Mutton Akhani Pulao|1500;Mutton Masala Sukha|1200;Mutton Masala Gravy|1200;Mutton Achari Gosht|1300;Mutton Angara|1300;Mutton Kadai|1200;Mutton Do Pyaza|1200;Mutton Moghlai|1400;Mutton Sauce|1200;Mutton Aalu Gosht|1250;Mutton Khichda|1900;Mutton Rashida|1400;Mutton Handi|1300;Mutton Dibba Gosht|1500;Mutton Tikka Masala|1450;Mutton Shahi Gosht|1500;Mutton Keema|1500;Mutton Keema Green|1600;Mutton Akha Tandoori (7 kg)|10000e"]
+];
+var TABS=[["daily","🍽️ Daily Menu"],["veg","🥬 Veg & Sweets"],["chicken","🍗 Chicken, Egg & Fish"],["mutton","🐐 Mutton"]];
+var cur="daily",mode=0,main=document.getElementById("main"),tabs=document.getElementById("tabs"),q=document.getElementById("q");
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/'/g,"&#39;")}
+function price(c){if(c==="Ask")return"<span class=p>Ask</span>";var u="/kg",n=c;if(/p$/.test(c)){u="/pc";n=c.slice(0,-1)}else if(/e$/.test(c)){u=" each";n=c.slice(0,-1)}
+return"<span class=p>₹"+Number(n).toLocaleString("en-IN")+"<small>"+u+"</small></span>"}
+function ico(n){n=n.toLowerCase();return/shawar/.test(n)?"🌯":/biryani/.test(n)?"🍛":/dal gosht/.test(n)?"🍲":"🍗"}
+function dish(d){var i=mode?2:1,j=mode?4:3;
+var s="<div class=dish data-s='"+esc(d[0]).toLowerCase()+"'><span class=ic>"+ico(d[0])+"</span><h3>"+esc(d[0])+(d[5]?"<span class=tag>"+d[5]+"</span>":"")+"</h3><div class=sizes>";
+s+="<div><small>"+(d[3]?"Full":"Price")+"</small><b>₹"+d[i]+"</b></div>";
+if(d[3])s+="<div><small>Half</small><b>₹"+d[j]+"</b></div>";
+return s+"</div></div>"}
+function daily(){
+var h="<div class=note><b>Available daily, 11:00 AM – 11:30 PM.</b> Choose <b>Parcel / Non A/C</b> or <b>A/C</b> to see the right price.</div>";
+h+="<div class=seg><button aria-pressed="+(mode==0)+" data-m=0>Parcel / Non A/C</button><button aria-pressed="+(mode==1)+" data-m=1>A/C</button></div>";
+h+="<section data-sec><h2>Main Course</h2><div class=grid>"+D.map(dish).join("")+"</div></section>";
+h+="<section data-sec><h2>Starters</h2><div class=grid>"+S.map(dish).join("")+"</div></section>";
+return h}
+function kg(t){return"<div class=note><b>Kg menu for parties, weddings &amp; functions.</b> Please order <b>4 hours prior</b>. Free home delivery in Airoli, Navi Mumbai.</div>"+M.filter(function(m){return m[0]==t}).map(sec).join("")}
+function sec(m){return"<section data-sec><h2><span class='dot "+(m[2]?"v":"n")+"'></span>"+esc(m[1])+"</h2><div class=grid>"+m[3].split(";").map(function(x){var a=x.split("|");return"<div class=row data-s='"+esc(a[0]).toLowerCase()+"'><span>"+esc(a[0])+"</span>"+price(a[1])+"</div>"}).join("")+"</div></section>"}
+function render(){
+var term=q.value.trim().toLowerCase();
+tabs.innerHTML=TABS.map(function(t){return"<button role=tab aria-selected="+(!term&&t[0]==cur)+" data-t="+t[0]+">"+t[1]+"</button>"}).join("");
+if(!term){main.innerHTML=cur=="daily"?daily():kg(cur);return}
+main.innerHTML=daily()+TABS.slice(1).map(function(t){return kg(t[0])}).join("");
+main.querySelectorAll(".note,.seg").forEach(function(e){e.remove()});
+main.querySelectorAll("[data-s]").forEach(function(e){if(e.dataset.s.indexOf(term)<0)e.remove()});
+main.querySelectorAll("[data-sec]").forEach(function(s){if(!s.querySelector("[data-s]"))s.remove()});
+if(!main.children.length)main.innerHTML="<p class=empty>No dish found for “"+esc(term)+"”. Try another word or call 99301 22235.</p>"}
+tabs.onclick=function(e){var b=e.target.closest("button");if(!b)return;cur=b.dataset.t;q.value="";render();window.scrollTo({top:0})};
+main.onclick=function(e){var b=e.target.closest("[data-m]");if(!b)return;mode=+b.dataset.m;render()};
+q.oninput=render;
+document.getElementById("share").onclick=function(){var d={title:"Bismillah Catering Menu",text:"Menu & rates – Bismillah Catering, Airoli",url:location.href};
+try{if(navigator.share){navigator.share(d)}else{navigator.clipboard.writeText(location.href);this.textContent="✅ Link copied"}}catch(x){}};
+render();
+</script>
+</body>
+</html>
